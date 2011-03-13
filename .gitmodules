@@ -1,0 +1,3 @@
+[submodule "vendor/wontomedia"]
+	path = vendor/wontomedia
+	url = git://github.com/gleneivey/wontomedia.git
