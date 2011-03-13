@@ -41,7 +41,9 @@ role :db,  'wontology.org', :primary => true
 
 
 set :app_to_customize,   File.join( release_path, 'vendor', 'wontomedia' )
+set :app_to_run,         File.join( current_path, 'vendor', 'wontomedia' )
 set :app_customization, [
       File.join( app_to_customize, 'default-custom' ),
       File.join( app_to_customize, 'customizations' )
   ].join(':')
+set :a2_port,            12045
