@@ -19,7 +19,7 @@
   #### NOTE: this deployment configuration is intended to deploy an
   ####   instance of WontoMedia customized with the assets from its
   ####   'default-custom' directory.  It is targeted at deploying to
-  ####   staging.wontology.org for WontoMedia testing and to be an
+  ####   fred.wontology.org for WontoMedia testing and to be an
   ####   example of deploying a WontoMedia-powered web site by
   ####   incorporating it into the web site's repository as a git
   ####   submodule.  For an example of WontoMedia being incorporated
@@ -28,7 +28,7 @@
 
 
 set :application, "fred.wontology.org"
-set :repository,  "git://github.com/gleneivey/staging.wontology.org.git"
+set :repository,  "git://github.com/gleneivey/fred.wontology.org.git"
 
 wontomedia = File.join File.dirname(__FILE__), '..', 'vendor', 'wontomedia'
 load File.join( wontomedia, 'config', 'deploy_wontomedia.rb' )
