@@ -27,7 +27,7 @@
   ####       https://github.com/gleneivey/wontology.org
 
 
-set :application, "staging.wontology.org"
+set :application, "fred.wontology.org"
 set :repository,  "git://github.com/gleneivey/staging.wontology.org.git"
 
 wontomedia = File.join File.dirname(__FILE__), '..', 'vendor', 'wontomedia'
@@ -40,10 +40,12 @@ role :web, 'wontology.org', :deploy => false
 role :db,  'wontology.org', :primary => true
 
 
-set :app_to_customize,   File.join( release_path, 'vendor', 'wontomedia' )
 set :app_to_run,         File.join( current_path, 'vendor', 'wontomedia' )
-set :app_customization, [
-      File.join( app_to_customize, 'default-custom' ),
-      File.join( app_to_customize, 'customizations' )
-  ].join(':')
-set :a2_port,            12045
+if release_path
+  set :app_to_customize,   File.join( release_path, 'vendor', 'wontomedia' )
+  set :app_customization, [
+        File.join( app_to_customize, 'default-custom' ),
+        File.join( release_path,     'customizations' )
+    ].join(':')
+end
+set :a2_port,            12046
