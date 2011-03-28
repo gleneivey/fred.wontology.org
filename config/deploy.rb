@@ -17,14 +17,15 @@
 
 
   #### NOTE: this deployment configuration is intended to deploy an
-  ####   instance of WontoMedia customized with the assets from its
-  ####   'default-custom' directory.  It is targeted at deploying to
-  ####   fred.wontology.org for WontoMedia testing and to be an
-  ####   example of deploying a WontoMedia-powered web site by
+  ####   instance of WontoMedia customized with the assets from:
+  ####    * WontoMedia's 'default-custom' directory, overlayed with
+  ####    * this repo's 'customizations
+  ####   to WontoMedia's staging server at fred.wontology.org.  It is
+  ####   also an example of deploying a WontoMedia-powered web site by
   ####   incorporating it into the web site's repository as a git
-  ####   submodule.  For an example of WontoMedia being incorporated
-  ####   into a site as a gem, see:
-  ####       https://github.com/gleneivey/wontology.org
+  ####   submodule, in this case in vendor/wontomedia.  For an example
+  ####   of WontoMedia being incorporated into a site as a gem, see:
+  ####   https://github.com/gleneivey/wontology.org
 
 
 set :application, "fred.wontology.org"
